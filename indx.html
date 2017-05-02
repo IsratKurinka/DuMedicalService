@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Javascript Tutorial</title>
+
+    <script type="text/javascript">
+
+        //alert("hello emma");
+        //a = 10;//global
+
+        function check() {
+
+            alert("hello emma");
+            //var b = 5;//local
+            var nameET = document.getElementById("nameET");
+            var warningMsg = document.getElementById("warning");
+
+            var name = nameET.value;
+            if(name == null || name.length<2)
+            {
+                warningMsg.innerHTML = "you entered invalid input";
+            }
+
+        }
+        function  oddEvenChecker() {
+            var value = document.getElementById("nameET").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                console.log(this.readyState);
+
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    console.log(this.status);
+                   var response = xhttp.responseText;
+                   document.getElementById("warning").innerHTML = response;
+                }
+
+            }
+            xhttp.open("GET", "checker.php?num="+value, true);
+
+            xhttp.send();
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+<input id="nameET" type="text" />
+<p id="warning"></p>
+<!--<input type="button" value="login" onclick="check()" /> -->
+<input type="button" value="odd Even Checker" onclick="oddEvenChecker()" />
+</body>
+</html>

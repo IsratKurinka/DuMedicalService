@@ -1,0 +1,59 @@
+/**
+ * Created by emma on 4/29/17.
+ */
+//var loginFlag = 0;
+function globalLogin() {
+    checkLogInMail();
+    //pageEntry();
+}
+function checkLogInMail() {
+    var mailET = document.getElementById("mailID");
+    var mailIdError = document.getElementById("mailIdErr");
+    mailID = mailET.value;
+    var regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!regex.test(mailID)) {
+        mailIdError.innerHTML = "Enter a valid Email id";
+        //loginFlag = 1;
+    }
+    else{
+        checkmailPass();
+    }
+}
+
+
+function checkmailPass() {
+    var passET = document.getElementById("psw");
+    var passError = document.getElementById("pswErr");
+
+    psw = passET.value;
+
+    console.log(mailID);
+    console.log(psw);
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        console.log(this.readyState);
+
+        if(this.readyState == 4 && this.status == 200)
+        {
+            console.log(this.status);
+            var response = xhttp.responseText;
+            document.getElementById("loginErr").innerHTML=response;
+            //alert(response);
+            if(String(response.trim()) === "success") {
+                //document.getElementById("loginErr").innerHTML = "Mail or Password is correct";
+                alert("Successfully logged in :)");
+                window.location.href = "index.html";
+
+            }
+            else{
+                document.getElementById("loginErr").innerHTML = response;
+
+            }
+        }
+
+    }
+    xhttp.open("GET", "passwordChecker.php?psw="+psw+"&mailID="+mailID, true);
+    xhttp.send();
+
+}

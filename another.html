@@ -1,0 +1,58 @@
+<?php
+require_once('DBconnection.php');
+//$dropdown_chooser = intval($_GET['data']);
+
+$sql = "SELECT hallName_full FROM hall_table ORDER BY hallName_full ASC";
+
+$result = $db->query($sql);
+$option = '';
+while($row = $result->fetch_assoc())
+{
+$option .= '<option value = "'.$row['hallName_full'].'">'.$row['hallName_full'].'</option>';
+}
+
+?>
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8"/>
+    <title>Sign-Up/Login Form</title>
+
+</head>
+<body>
+
+
+
+
+<form>
+    <select>
+        <?php echo $option; ?>
+    </select>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
