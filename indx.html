@@ -10,50 +10,27 @@
         //alert("hello emma");
         //a = 10;//global
 
-        function check() {
 
-            alert("hello emma");
-            //var b = 5;//local
-            var nameET = document.getElementById("nameET");
-            var warningMsg = document.getElementById("warning");
-
-            var name = nameET.value;
-            if(name == null || name.length<2)
-            {
-                warningMsg.innerHTML = "you entered invalid input";
-            }
-
-        }
-        function  oddEvenChecker() {
-            var value = document.getElementById("nameET").value;
-
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                console.log(this.readyState);
-
-                if(this.readyState == 4 && this.status == 200)
-                {
-                    console.log(this.status);
-                   var response = xhttp.responseText;
-                   document.getElementById("warning").innerHTML = response;
-                }
-
-            }
-            xhttp.open("GET", "checker.php?num="+value, true);
-
-            xhttp.send();
-        }
 
     </script>
+    <style>
+
+
+
+
+    </style>
 
 
 </head>
 
 <body>
-
-<input id="nameET" type="text" />
-<p id="warning"></p>
-<!--<input type="button" value="login" onclick="check()" /> -->
-<input type="button" value="odd Even Checker" onclick="oddEvenChecker()" />
+<form class="navbar-form" role="search">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="q">
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+    </div>
+</form>
 </body>
 </html>

@@ -16,6 +16,7 @@ var friday;
 
 
 function getDoctorsList(){
+
     console.log(checker);
     checker = checker +1;
 
@@ -190,6 +191,7 @@ function dynamic() {
 
 
 function loadDrdetails() {
+
     console.log("entering");
     var searchContent = document.getElementById("varSearch");
     console.log(searchContent.value);

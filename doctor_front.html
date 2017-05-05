@@ -1,202 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
-
+    <title>doctor</title>
 
     <script src="getDrList.js"> </script>
     <script>
         //call after page loaded
         window.onload = getDoctorsList() ;
+
+        var modal = document.getElementById('id03');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
     </script>
 
     <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!---<link rel="stylesheet" type="text/css" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="doctor.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--- CSS part --->
-
-    <style>
-
-        button {
-            background-color: #8aa3d9;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: auto;
-            height: auto;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-        /*.button2 {background-color: #008CBA;} /* Blue */
-
-        /* Extra styles for the cancel button */
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #a4c0ff;
-        }
-
-        /* Center the image and position the close button */
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-        }
-
-        img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        }
-
-        .container2 {
-            padding: 16px;
-        }
-
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none; /* kHidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            padding-top: 60px;
-        }
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-        }
-
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #f08080;
-            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-            border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button (x) */
-        .close {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #f5ff9f;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #fffdcd;
-            cursor: pointer;
-        }
-
-        /* Add Zoom Animation */
-        .animate {
-            -webkit-animation: animatezoom 0.6s;
-            animation: animatezoom 0.6s
-        }
-
-        @-webkit-keyframes animatezoom {
-            from {-webkit-transform: scale(0)}
-            to {-webkit-transform: scale(1)}
-        }
-
-        @keyframes animatezoom {
-            from {transform: scale(0)}
-            to {transform: scale(1)}
-        }
-
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-            .cancelbtn {
-                width: auto;
-            }
-        }
-
-
-
-        .container-fluid{
-
-            padding-left: 80px;
-            padding-right: 120px;
-        }
-        .btn-lg,
-        .btn-group-lg > .btn {
-            padding: 10px 16px;
-            font-size: 20px;
-            line-height: 1.5em;
-            border-radius: 6px;
-            height: auto;
-            width: auto;
-        }
-        .btn-skin .badge {
-            color: #5bc0de;
-            background-color: #fff;
-        }
-        .jumbotron {
-            background-color: #f4511e;
-            color: #fff;
-        }
-        input[type=text] {
-            color: #a4c0ff;
-            background-color:#a4c0ff ;
-            width: 130px;
-            box-sizing: border-box;
-            border: 2px solid #a4c0ff;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-        input[type=text]:focus {
-            width: 50%;
-        }
-
-
-    </style>
 
 </head>
 
 <body>
-
 <!-------Search bar-------->
-<div class="container-fluid text-center" style="background-color: #fa897f">
+
+<nav class="navbar navbar-inverse" style="height: 80px; background-color: lightcoral">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar2">
+            <ul class="nav navbar-nav">
+                <li><a href="#intro">Home</a></li>
+                <li class="active"><a href="#doctor">Doctor</a></li>
+                <li><a href="#doctorlist">Doctor List</a></li>
+                <li><a href="#appointment" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Appointment</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form nav-right" role="search">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Search Doctor..">
+                    <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+                </div>
+            </form>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <div id="id03" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog" action="">
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id03').style.display='none'" class="close" data-dismiss="modal"title="Close Modal">&times;</span>
+                    <img src="app.png" style="height: auto" width="auto" alt="Avatar" >
+                </div>
+
+                <div class="container2">
+                    <label><b>Mail ID</b></label>
+                    <input type="text" placeholder="Enter Username" name= "mailID" id="mailID" required>
+                    <p id="mailIdErr"></p>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                    <p id="pswErr"></p>
+
+                    <button id ="submit" type="submit" style="height: auto" width="auto" onclick="globalAppointment()">Submit</button>
+                    <p id="loginErr"></p>
+                    <!--<button type="submit" style="height: auto" width="auto" onclick="document.getElementById('id02').style.display='block'
+                     "href="#myModal1" data-toggle="modal">Make Health Card</button>-->
+                    <br>
+                    <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn"data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</nav>
+
+
+
+
+<!--<div class="container-fluid text-center" style="background-color: #fa897f">
     <h1 style="color: #9fdde8">Search Doctors Here</h1>
     <form>
         <input id=varSearch type="text" list="json-datalist" placeholder="Search.." onkeypress="searchFun()">
         <datalist id="json-datalist"></datalist>
-        <input type="button" id ="searchButton" value=" Go " onclick="loadDrdetails()"></input><br>
+        <input type="submit" id ="searchButton" value=" Go " onclick="loadDrdetails()"></input><br>
     </form>
-</div><br>
+</div><br>-->
 
 
 <div id="content"></div>

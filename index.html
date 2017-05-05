@@ -13,7 +13,7 @@
      <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="healthCard.js"> </script>
     <script type="text/javascript" src="login.js"> </script>
@@ -22,6 +22,15 @@
         function doctor_page() {
             window.location.href = "doctor_front.html";
         }
+        var modal = document.getElementById('id01');
+        var modal = document.getElementById('id02');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
     </script>
 
 </head>
@@ -29,18 +38,16 @@
  <body>
 
 
-
-
  <!---------------------navigation bar----------------->
 
- <nav class="navbar navbar-inverse" style="background-color: lightcoral">
+ <nav class="navbar navbar-inverse" style="height: 80px; background-color: lightcoral">
      <div class="container-fluid">
          <div class="navbar-header">
          </div>
      </div>
      </nav>
 
-   <nav class="navbar navbar-inverse" style="background-color: #04476b">
+ <nav class="navbar navbar-inverse" style="background-color: #04476b">
        <div class="container-fluid">
            <div class="navbar-header">
                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -58,7 +65,7 @@
                    <li><a href="#appoinment">Appointment</a></li>
                    <li><a href="#service">Service</a></li>
                    <li><a input id="doctor" onclick="doctor_page()" href="#doctor">Doctor</a></li>
-                   <li><a href="#gallery">Gallery</a></li>
+
                </ul>
                <ul class="nav navbar-nav navbar-right">
                    <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;
