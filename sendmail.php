@@ -1,6 +1,10 @@
 <?php
-//require_once('DBconnection.php');
+require_once('DBconnection.php');
 include 'healthcard.php';
+
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+
 if($val = "Success")
 {
     $name = $_GET["name"];
