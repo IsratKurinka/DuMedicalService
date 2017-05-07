@@ -7,8 +7,8 @@
  */
 //session_start();
 $servername = "localhost";
-$username = "root";
-$password = "1234";
+$username = "duhospital";
+$password = "duhospital";
 $dbname = "duhospital";
 
 //create connection
