@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <title>doctor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><title>DU Medical : Doctor</title>
@@ -9,10 +10,17 @@
     <script type="text/javascript" src="fixAppointment.js"></script>
     <script type="text/javascript" src="logout.js"> </script>
     <script type="text/javascript" src="doctor_frontJS.js"></script>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>doctor</title>
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
     <script src="getDrList.js"> </script>
     <script>
         //call after page loaded
         window.onload = getDoctorsList() ;
+<<<<<<< HEAD
         function home_page() {
             window.location.href = "index.html";
         }
@@ -21,12 +29,18 @@
         }
 
         var modal = document.getElementById('id03');
+=======
+
+        var modal = document.getElementById('id03');
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+<<<<<<< HEAD
     </script>
 
     <!---datepcer
@@ -34,10 +48,16 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     --->
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+=======
+
+    </script>
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
     <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="doctor.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<<<<<<< HEAD
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -61,6 +81,22 @@
     </div>
 </nav>
 
+=======
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+<!-------Search bar-------->
+
+<nav class="navbar navbar-inverse" style="height: 80px; background-color: lightcoral">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+    </div>
+</nav>
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -68,10 +104,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
             </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar2">
             <ul class="nav navbar-nav">
+<<<<<<< HEAD
                 <li><a href="#intro" onclick="home_page()">Home</a></li>
 
                 <li><a onclick="reloaddr()" class="active" href="#doctor">Doctor</a></li>
@@ -99,12 +140,41 @@
                 </form>
             </ul>
 
+=======
+                <li><a href="#intro">Home</a></li>
+                <li class="active"><a href="#doctor">Doctor</a></li>
+                <li><a href="#doctorlist">Doctor List</a></li>
+                <li><a href="#appointment" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Appointment</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form nav-right" role="search">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Search Doctor..">
+                    <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+                </div>
+            </form>
+            </ul>
+
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
         </div>
 
     </div>
 
+<<<<<<< HEAD
     <!--------------------------Appointment---------------------------->
 
+=======
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
     <div id="id03" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
 
         <div class="modal-dialog" action="">
@@ -115,6 +185,7 @@
                 </div>
 
                 <div class="container2">
+<<<<<<< HEAD
                     <label><b style="color: #045a84">Doctor's Department</b></label>
                     <input type="text" placeholder="Enter department" list="dept-datalist" id="dept" onclick="getDeptList()" required>
                     <datalist id="dept-datalist"></datalist>
@@ -141,6 +212,21 @@
                     <!--<button type="submit" style="height: auto" width="auto" onclick="document.getElementById('id02').style.display='block'
                      "href="#myModal1" data-toggle="modal">Make Health Card</button>-->
 
+=======
+                    <label><b>Mail ID</b></label>
+                    <input type="text" placeholder="Enter Username" name= "mailID" id="mailID" required>
+                    <p id="mailIdErr"></p>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                    <p id="pswErr"></p>
+
+                    <button id ="submit" type="submit" style="height: auto" width="auto" onclick="globalAppointment()">Submit</button>
+                    <p id="loginErr"></p>
+                    <!--<button type="submit" style="height: auto" width="auto" onclick="document.getElementById('id02').style.display='block'
+                     "href="#myModal1" data-toggle="modal">Make Health Card</button>-->
+                    <br>
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
                     <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn"data-dismiss="modal">Cancel</button>
                 </div>
 
@@ -149,9 +235,19 @@
 
     </div>
 
+<<<<<<< HEAD
 </nav>
 
 
+=======
+
+
+</nav>
+
+
+
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 <!--<div class="container-fluid text-center" style="background-color: #fa897f">
     <h1 style="color: #9fdde8">Search Doctors Here</h1>
     <form>
@@ -161,6 +257,7 @@
     </form>
 </div><br>-->
 
+<<<<<<< HEAD
 <!----------- load more ---------------------------------->
 
 <div id="content"></div>
@@ -176,3 +273,14 @@
 
 </body>
 </html>
+=======
+
+<div id="content"></div>
+<div class="container-fluid text-center">
+    <input type="button" id="loadButton" value="Load more" onclick="dynamic()">
+</div>
+
+
+</body>
+</html>
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a

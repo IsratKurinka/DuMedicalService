@@ -4,6 +4,10 @@
 //var loginFlag = 0;
 function globalLogin() {
     checkLogInMail();
+<<<<<<< HEAD
+=======
+    //pageEntry();
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 }
 function checkLogInMail() {
     var mailET = document.getElementById("mailID");
@@ -37,6 +41,7 @@ function checkmailPass() {
         {
             console.log(this.status);
             var response = xhttp.responseText;
+<<<<<<< HEAD
             if(String(response.trim()) === "success") {
                 alert("Successfully logged in :)");
                 document.getElementById("id01").style.display = 'none';
@@ -47,10 +52,28 @@ function checkmailPass() {
             }
             else{
                 document.getElementById("loginErr").innerHTML = response;
+=======
+            document.getElementById("loginErr").innerHTML=response;
+            //alert(response);
+            if(String(response.trim()) === "success") {
+                //document.getElementById("loginErr").innerHTML = "Mail or Password is correct";
+                alert("Successfully logged in :)");
+                window.location.href = "index.html";
+
+            }
+            else{
+                document.getElementById("loginErr").innerHTML = response;
+
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
             }
         }
 
     }
     xhttp.open("GET", "passwordChecker.php?psw="+psw+"&mailID="+mailID, true);
     xhttp.send();
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a

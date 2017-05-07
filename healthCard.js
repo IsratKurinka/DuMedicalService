@@ -176,7 +176,11 @@ function checkRegNo() {
         {
             console.log(this.status);
             var response = xhttp.responseText;
+<<<<<<< HEAD
             //regNoError.innerHTML = response;
+=======
+            regNoError.innerHTML = response;
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
             if(String(response.trim()) !== "Success")
                 signFlag = 1;
 
@@ -238,9 +242,13 @@ function databaseEntry() {
             {
                 console.log(this.status);
                 var response = xhttp.responseText;
+<<<<<<< HEAD
                 console.log(response);
                 signUpError.innerHTML=response;
                 //alert(response);
+=======
+                signUpError.innerHTML=response;
+>>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
                 if(String(response.trim()) === "Success") {
                     alert("Successfully signed up :)");
                     window.location.href = "index.html";
