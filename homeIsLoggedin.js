@@ -15,7 +15,6 @@ function isLoggedin2() {
                 document.getElementById("navBarHealthcard").style.display = 'none';
                 document.getElementById("navBarLog").innerHTML = '<li>\<a onclick="myFunc();"' +
                     ' style="width:auto;"> Logout </a>\</li>';
-                //document.getElementById("id01").style.display = "none";
             }
         }
     }

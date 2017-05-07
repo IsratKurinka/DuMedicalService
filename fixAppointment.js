@@ -16,9 +16,9 @@ function appointment(){
             }
             else{
                 document.getElementById('id03').style.display='none';
-                alert("Please log in first :)");
+                alert("Log in First! :)");
                 window.location.href = "index.html";
-
+                $('#id01').modal('hide');
             }
         }
 

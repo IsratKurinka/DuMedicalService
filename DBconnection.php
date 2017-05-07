@@ -7,15 +7,9 @@
  */
 //session_start();
 $servername = "localhost";
-<<<<<<< HEAD
-$username = "duhospital";
-$password = "duhospital";
-$dbname = "duhospital";
-=======
 $username = "root";
 $password = "1234";
-$dbname = "duHospital";
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
+$dbname = "duhospital";
 
 //create connection
 $db = new mysqli($servername, $username, $password, $dbname);

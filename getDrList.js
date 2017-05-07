@@ -5,10 +5,7 @@ var checker = 0;
 var searchFlag = 0;
 var index = 0;
 var drName ;
-<<<<<<< HEAD
 var drID;
-=======
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 var drDept ;
 var saturday;
 var sunday;
@@ -17,11 +14,7 @@ var tuesday;
 var wednesday;
 var thursday;
 var friday;
-<<<<<<< HEAD
 var total;
-=======
-
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 
 function getDoctorsList(){
 
@@ -42,10 +35,7 @@ function getDoctorsList(){
 
                 drName = new Array(length);
                 drDept = new Array(length);
-<<<<<<< HEAD
                 drID = new Array(length);
-=======
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
                 saturday = new Array(length);
                 sunday = new Array(length);
                 monday = new Array(length);
@@ -55,14 +45,9 @@ function getDoctorsList(){
                 friday = new Array(length);
 
                 for (var i = 0; i < length; i++) {
-<<<<<<< HEAD
                     drName[i] = obj[i].drName;
                     drDept[i] = obj[i].deptName;
                     drID[i] = obj[i].dr_ID;
-=======
-                    drName[i] = obj[i].name;
-                    drDept[i] = obj[i].deptName;
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
                     if( obj[i].saturday.length < 1 ){
                         saturday[i] = "#";
                     }
@@ -129,11 +114,8 @@ function getDoctorsList(){
                     console.log(obj[i].name + " -> " + obj[i].deptName + "::" + drName[i] + "->" + drDept[i]);
                     console.log(saturday[i] + sunday[i] + monday[i] +tuesday[i]+wednesday[i]+friday[i]);
                 }
-<<<<<<< HEAD
                 total = length;
                 dynamic();
-=======
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
             }
         }
     }
@@ -141,11 +123,7 @@ function getDoctorsList(){
     xhttp.send();
 
 }
-<<<<<<< HEAD
 getDoctorsList();
-=======
-
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 function searchFun() {
     console.log(searchFlag);
     if( searchFlag != 1 ) {
@@ -165,7 +143,6 @@ function searchFun() {
 
 
 function dynamic() {
-<<<<<<< HEAD
     //alert(drName.length);
     for( var i = 0; i < total; i++) {
         var d = new Array(5);
@@ -206,46 +183,6 @@ function dynamic() {
         var div = document.createElement('div');
         div.className = 'row';
         div.innerHTML = '<br>\
-=======
-    var d = new Array(5);
-    var i = 0;
-    var name = drName[index];
-    var dept = drDept[index];
-    if( saturday[index].localeCompare("#") ){
-        d[i] = saturday[index];
-        i = i+1;
-    }
-    if( sunday[index].localeCompare("#") ){
-        d[i] = sunday[index];
-        i = i+1;
-    }
-    if( monday[index].localeCompare("#") ){
-        d[i] = monday[index];
-        i = i+1;
-    }
-    if( tuesday[index].localeCompare("#") ){
-        d[i] = tuesday[index];
-        i = i+1;
-    }
-    if( wednesday[index].localeCompare("#") ){
-        d[i] = wednesday[index];
-        i = i+1;
-    }
-    if( thursday[index].localeCompare("#") ){
-        d[i] = thursday[index];
-        i = i+1;
-    }
-    if( friday[index].localeCompare("#") ){
-        d[i] = friday[index];
-        i = i+1;
-    }
-    index = index +1;
-    console.log(name + "      " + dept);
-    console.log(d[0]+d[1]+d[2]+d[3]+d[4]);
-    var div = document.createElement('div');
-    div.className = 'row';
-    div.innerHTML ='<br>\
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
                     <div class="col-sm-8">\
                     <img src="doctormale.png" height="200" width="200">\
                     </div>\
@@ -253,7 +190,6 @@ function dynamic() {
                     <h3 style="color: #91ace8">Name: ' + name + '</h3>\
                     <h4 style="color: #91ace8">Dept: ' + dept + '</h4>\
                     <h5 style="color: #91ace8">Working Hour: <br>' +
-<<<<<<< HEAD
             d[0] + '<br>' + d[1] + '<br>' + d[2] + '<br>' + d[3] + '<br>' + d[4] + '</h5>\
                     <br>\<br>\</div>';
 
@@ -261,15 +197,6 @@ function dynamic() {
     }
 }
 
-=======
-                    d[0] + '<br>' + d[1] + '<br>' + d[2] + '<br>' + d[3] + '<br>' + d[4] + '</h5>\
-                    <br>\<br>\</div>';
-
-    document.getElementById('content').appendChild(div);
-}
-
-
->>>>>>> 5b6b2426097b5c149197d72d84e8805e4859193a
 function loadDrdetails() {
 
     console.log("entering");
