@@ -38,8 +38,9 @@ function checkmailPass() {
             console.log(this.status);
             var response = xhttp.responseText;
             if(String(response.trim()) === "success") {
-                alert("Successfully logged in :)");
+
                 document.getElementById("id01").style.display = 'none';
+                $('#id01').modal('hide');
                 document.getElementById("navBarHealthcard").style.display = 'none';
                 document.getElementById("navBarLog").innerHTML = '<li>\<a onclick="myFunc();"' +
                     ' style="width:auto;"> Logout </a>\</li>';

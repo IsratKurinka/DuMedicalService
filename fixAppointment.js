@@ -91,7 +91,7 @@ function checkDB(){
         if(this.readyState == 4 && this.status == 200) {
             console.log(this.status);
             var response = xhttp.responseText;
-            alert(response);
+           /* alert(response);*/
             if( String(response.trim()) === "No slot available, try another day" || String(response.trim()) === "You already have an appoinment"){
                 document.getElementById("submitErr").innerHTML = response;
                 document.getElementById("dateErr").innerHTML = "";
