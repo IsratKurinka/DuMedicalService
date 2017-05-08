@@ -1,5 +1,4 @@
 <?php
-require_once('DBconnection.php');
 include 'healthcard.php';
 
 //ini_set('display_errors', 1);
